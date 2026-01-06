@@ -1,182 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cestrus.ai - Coming Soon</title>
-    <!-- Google Fonts -->
+    <meta name="description"
+        content="CESTRUS.ai - Autonomous Systems for a Contested World. Developing fully autonomous, low-cost drone platforms designed for mass deployment in contested environments.">
+    <meta name="keywords"
+        content="autonomous drones, defence technology, UAS, unmanned aerial systems, Canadian defence, military technology">
+    <title>CESTRUS.ai | Autonomous Systems for a Contested World</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-green: #4fa304; /* A modern, military green */
-            --brand-dark: #0a0a0a;
-            --brand-light: #f8f9fa;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-        body {
-            font-family: 'Exo 2', sans-serif;
-            background-color: var(--brand-dark);
-            color: var(--brand-light);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            overflow: hidden; /* Hide scrollbars from glow effect */
-        }
-
-        .container-wrapper {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--brand-dark);
-            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        
-        .glow-effect {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80vw;
-            max-width: 800px;
-            height: 50vh;
-            max-height: 500px;
-            background: radial-gradient(circle, rgba(88, 114, 70, 0.2) 0%, rgba(10, 10, 10, 0) 70%);
-            filter: blur(100px);
-            z-index: 0;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
-
-        .gradient-text {
-            background: -webkit-linear-gradient(45deg, var(--brand-green), #7A8C69);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            font-size: calc(2.5rem + 3vw);
-            line-height: 1.1;
-        }
-
-        .ai-suffix {
-            -webkit-text-fill-color: var(--brand-light);
-        }
-
-        h1 {
-            margin: 0 0 1rem 0;
-        }
-
-        .subtitle {
-            font-size: calc(1rem + 0.5vw);
-            font-weight: 500;
-            color: rgba(248, 249, 250, 0.8);
-            margin-bottom: 2rem;
-        }
-        
-        .description {
-            font-size: 1.1rem;
-            color: rgba(248, 249, 250, 0.6);
-            line-height: 1.6;
-            margin-bottom: 3rem;
-        }
-
-        .coming-soon-badge {
-            display: inline-block;
-            background-color: rgba(88, 114, 70, 0.1);
-            color: var(--brand-green);
-            padding: 0.5rem 1.5rem;
-            border-radius: 9999px;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(88, 114, 70, 0.3);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        @media (min-width: 768px) {
-            .contact-form {
-                flex-direction: row;
-                justify-content: center;
-            }
-        }
-
-        .form-input {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            color: var(--brand-light);
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            width: 100%;
-            max-width: 350px;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--brand-green);
-            box-shadow: 0 0 0 4px rgba(88, 114, 70, 0.25);
-        }
-
-        .form-button {
-            background-color: var(--brand-green);
-            border: none;
-            color: var(--brand-dark);
-            font-weight: 700;
-            padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%;
-            max-width: 350px;
-        }
-
-        @media (min-width: 768px) {
-            .form-button {
-                width: auto;
-            }
-        }
-
-        .form-button:hover {
-            background-color: #4A603A;
-        }
-
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-    <div class="container-wrapper">
-        <div class="glow-effect"></div>
-        <div class="content">
-            <div class="coming-soon-badge">Coming Soon</div>
-            <h1 class="gradient-text">CESTRUS<span class="ai-suffix">.ai</span></h1>
-            <p class="subtitle">Autonomous Systems for a Contested World.</p>
-            <p class="description">
-                Developing sovereign, attritable drone and AI solutions for reliable navigation and targeting in GPS-denied and contested EW environments.
-            </p>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">CESTRUS<span class="logo-dot">.AI</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#mission" class="nav-link">Mission</a></li>
+                <li><a href="#pillars" class="nav-link">Technology</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                <span>Canadian Defence Technology</span>
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                <span class="title-line">CESTRUS</span>
+                <span class="title-dot">.AI</span>
+            </h1>
+            <p class="hero-tagline animate-fade-in-up delay-1">
+                Autonomous Systems for a Contested World
+            </p>
+            <p class="hero-description animate-fade-in-up delay-2">
+                Developing fully autonomous, low-cost drone platforms designed for
+                mass deployment in contested environments.
+            </p>
+            <div class="hero-cta animate-fade-in-up delay-3">
+                <a href="#mission" class="btn btn-primary">Explore Our Mission</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span class="scroll-line"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section section-mission" id="mission">
+        <div class="container">
+            <div class="section-grid">
+                <div class="section-label reveal">
+                    <span class="label-number">01</span>
+                    <span class="label-text">Mission</span>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-title reveal">
+                        The Modern Battlefield is Evolving
+                    </h2>
+                    <p class="section-lead reveal delay-1">
+                        Traditional military hardware is too expensive to lose, too slow to deploy,
+                        and too reliant on the electromagnetic spectrum.
+                    </p>
+                    <div class="mission-points reveal delay-2">
+                        <div class="mission-point">
+                            <div class="point-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5" />
+                                    <path d="M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <div class="point-content">
+                                <h4>Decisive Advantage</h4>
+                                <p>Enable commanders to achieve operational scale without prohibitive cost</p>
+                            </div>
+                        </div>
+                        <div class="mission-point">
+                            <div class="point-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </div>
+                            <div class="point-content">
+                                <h4>Rapid Deployment</h4>
+                                <p>Systems designed for speed and agility in evolving combat scenarios</p>
+                            </div>
+                        </div>
+                        <div class="mission-point">
+                            <div class="point-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <div class="point-content">
+                                <h4>Sovereign Manufacturing</h4>
+                                <p>Built in Canada, for Canada and allied forces</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Pillars Section -->
+    <section class="section section-pillars" id="pillars">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="label-number">02</span>
+                    <span class="label-text">Technology</span>
+                </div>
+                <h2 class="section-title reveal delay-1">Three Pillars of CESTRUS.ai</h2>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card reveal">
+                    <div class="pillar-number">01</div>
+                    <h3 class="pillar-title">Attritable</h3>
+                    <div class="pillar-line"></div>
+                    <p class="pillar-description">
+                        Designed for mass production enabling commanders to achieve
+                        operational scale without prohibitive cost. Deploy at volume,
+                        accept calculated losses.
+                    </p>
+                    <ul class="pillar-features">
+                        <li>Low-cost architecture</li>
+                        <li>Mass production ready</li>
+                        <li>Expendable by design</li>
+                    </ul>
+                </div>
+                <div class="pillar-card reveal delay-1">
+                    <div class="pillar-number">02</div>
+                    <h3 class="pillar-title">Modular</h3>
+                    <div class="pillar-line"></div>
+                    <p class="pillar-description">
+                        Allows for rapid swapping of payloads, sensors, and components,
+                        enabling quick field repairs and mission adaptability across
+                        diverse operational environments.
+                    </p>
+                    <ul class="pillar-features">
+                        <li>Swappable payloads</li>
+                        <li>Field repairable</li>
+                        <li>Mission configurable</li>
+                    </ul>
+                </div>
+                <div class="pillar-card reveal delay-2">
+                    <div class="pillar-number">03</div>
+                    <h3 class="pillar-title">Autonomous</h3>
+                    <div class="pillar-line"></div>
+                    <p class="pillar-description">
+                        Integrates machine learning and artificial intelligence for
+                        autonomous targeting, intelligence gathering, and operations
+                        in denied environments.
+                    </p>
+                    <ul class="pillar-features">
+                        <li>AI-powered targeting</li>
+                        <li>GPS-denied operation</li>
+                        <li>Autonomous navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section section-products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="label-number">03</span>
+                    <span class="label-text">Products</span>
+                </div>
+                <h2 class="section-title reveal delay-1">Our Product Suite</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card reveal">
+                    <div class="product-status">Available</div>
+                    <h3 class="product-name">A2D</h3>
+                    <p class="product-description">
+                        Analog to Digital Ground Control Station. Next-generation
+                        control interface for seamless operator integration.
+                    </p>
+                    <div class="product-tags">
+                        <span class="tag">Ground Control</span>
+                        <span class="tag">Interface</span>
+                    </div>
+                </div>
+                <div class="product-card reveal delay-1">
+                    <div class="product-status">2026</div>
+                    <h3 class="product-name">DART</h3>
+                    <p class="product-description">
+                        ML-powered target identification and terminal guidance system.
+                        Precision engagement with autonomous decision-making.
+                    </p>
+                    <div class="product-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Targeting</span>
+                    </div>
+                </div>
+                <div class="product-card reveal delay-2">
+                    <div class="product-status">2026</div>
+                    <h3 class="product-name">GUIDE</h3>
+                    <p class="product-description">
+                        GPS-denied navigation system enabling reliable operation in
+                        contested electromagnetic environments.
+                    </p>
+                    <div class="product-tags">
+                        <span class="tag">Navigation</span>
+                        <span class="tag">EW Resilient</span>
+                    </div>
+                </div>
+                <div class="product-card reveal delay-3">
+                    <div class="product-status">2026</div>
+                    <h3 class="product-name">FPV</h3>
+                    <p class="product-description">
+                        A fully integrated hardware and software FPV drone platform
+                        ready for operational deployment.
+                    </p>
+                    <div class="product-tags">
+                        <span class="tag">Hardware</span>
+                        <span class="tag">Integrated</span>
+                    </div>
+                </div>
+                <div class="product-card reveal delay-4">
+                    <div class="product-status">2026</div>
+                    <h3 class="product-name">LABS</h3>
+                    <p class="product-description">
+                        System integration and mission acceleration platform for
+                        rapid capability development and testing.
+                    </p>
+                    <div class="product-tags">
+                        <span class="tag">Integration</span>
+                        <span class="tag">R&D</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="section section-roadmap" id="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="label-number">04</span>
+                    <span class="label-text">Roadmap</span>
+                </div>
+                <h2 class="section-title reveal delay-1">Development Timeline</h2>
+            </div>
+            <div class="roadmap-timeline reveal delay-2">
+                <div class="timeline-line"></div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot active"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">NOW</span>
+                        <h4>A2D Ground Control Station</h4>
+                        <p>Analog to Digital control interface for operators</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2026</span>
+                        <h4>DART & GUIDE</h4>
+                        <p>ML-powered targeting and GPS-denied navigation</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2026</span>
+                        <h4>FPV & LABS</h4>
+                        <p>Integrated FPV platform and mission acceleration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section section-values" id="values">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal">
+                    <span class="label-number">05</span>
+                    <span class="label-text">Values</span>
+                </div>
+                <h2 class="section-title reveal delay-1">Working with Cestrus</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-item reveal">
+                    <span class="value-number">01</span>
+                    <h4>Operational Experience</h4>
+                </div>
+                <div class="value-item reveal delay-1">
+                    <span class="value-number">02</span>
+                    <h4>Relentless Focus on Mission</h4>
+                </div>
+                <div class="value-item reveal delay-2">
+                    <span class="value-number">03</span>
+                    <h4>Speed</h4>
+                </div>
+                <div class="value-item reveal delay-3">
+                    <span class="value-number">04</span>
+                    <h4>Continuous Improvement</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-about" id="about">
+        <div class="container">
+            <div class="section-grid">
+                <div class="section-label reveal">
+                    <span class="label-number">06</span>
+                    <span class="label-text">About</span>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-title reveal">Our Team</h2>
+                    <p class="section-lead reveal delay-1">
+                        CESTRUS.ai was founded by experienced professionals committed to
+                        delivering next-generation autonomous systems for Canadian defence.
+                    </p>
+                    <div class="team-grid reveal delay-2">
+                        <div class="team-member">
+                            <div class="member-avatar">🔒</div>
+                            <div class="member-info">
+                                <h4>In Stealth</h4>
+                                <span>Founder</span>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">🔒</div>
+                            <div class="member-info">
+                                <h4>In Stealth</h4>
+                                <span>Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title reveal">How Can We Help?</h2>
+                <p class="contact-description reveal delay-1">
+                    Partner with us to build the future of autonomous defence systems.
+                </p>
+                <div class="contact-grid reveal delay-2">
+                    <a href="mailto:sales@cestrus.ai" class="contact-card">
+                        <span class="contact-label">Sales Inquiries</span>
+                        <span class="contact-email">sales@cestrus.ai</span>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    CESTRUS<span class="logo-dot">.AI</span>
+                </div>
+                <div class="footer-tagline">
+                    Autonomous Systems for a Contested World
+                </div>
+                <div class="footer-copyright">
+                    © 2026 CESTRUS.ai. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
+
 </html>
